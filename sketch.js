@@ -48,7 +48,7 @@ function draw() {
   
   ellipse(ball.position.x, ball.position.y, 32);
  
- keyPressed();
+ 
 
   groundObj.display();
   leftSide.display();
@@ -60,7 +60,7 @@ function draw() {
 
 function keyPressed() {
 	if(keyCode === UP_ARROW) {
-		Matter.Body.applyForce(ball, {x:0,y:0}, {x:0.05, y:-0.05});
+		Matter.Body.applyForce(ball, ball.position , {x:65, y:-65});
 
 	}
 }
